@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import React, { Fragment } from "react"
 import { Route, Routes } from "react-router-dom"
 import UseScrollToTop from "@hooks/useScrollToTop"
 import Home from "@views/Home"

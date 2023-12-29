@@ -19,9 +19,19 @@ module.exports = {
   module: {
     rules: [
       {
-        use: "ts-loader",
         test: /\.(ts|tsx)$/,
-        exclude: /node_modules/
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "swc-loader",
+          options: {
+            sync: true,
+            jsc: {
+              parser: {
+                syntax: "typescript"
+              }
+            }
+          }
+        }
       },
       {
         use: [
