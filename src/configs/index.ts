@@ -10,6 +10,11 @@ export const AWS_S3_BUCKET = process.env.REACT_APP_AWS_S3_BUCKET || ""
 /* --- App Router Endpoints --- */
 export const URL = {
   HOME: "/",
+  ABOUT: "/about",
+  BUSINESS: "/business",
+  CONTACT: "/contact",
+  FAQ: "/faq",
+  FEATURES: "/features",
   SIGN_IN: "/sign-in",
   SIGN_UP: "/sign-up",
   FORGOT_PASSWORD: "/forgot-password",

@@ -15,31 +15,9 @@ const MainRouter = () => {
     <Fragment>
       <UseScrollToTop />
       <Routes>
-        <Route path={URL.HOME} element={<Home />} />
-
-        {/* for Public Route */}
-        <Route element={<PublicRoute />}>
-          <Route path={URL.SIGN_IN} element={<SignIn />} />
-          <Route path={URL.SIGN_UP} element={<SignUp />} />
-        </Route>
-        {/* for Private Route  */}
-        <Route element={<PrivateRoute />}>
-          {ROUTE_LIST.map(({ link, element: Component, isLayout }, i) =>
-            isLayout ? (
-              <Route
-                key={"routes---" + i}
-                path={link}
-                element={
-                  <MainLayout>
-                    <>{/* <Component /> */}</>
-                  </MainLayout>
-                }
-              />
-            ) : (
-              <Route key={"routes---" + i} path={link} element={<>{/* <Component /> */}</>} />
-            )
-          )}
-        </Route>
+        {ROUTE_LIST.map(({ link, element: Component, isLayout }, i) => (
+          <Route key={"routes---" + i} path={link} element={<Component />} />
+        ))}
       </Routes>
     </Fragment>
   )
