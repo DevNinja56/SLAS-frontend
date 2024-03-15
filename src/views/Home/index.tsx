@@ -1,17 +1,14 @@
 import React from "react"
-import Header from "@components/Header"
 import Button from "@components/Common/Button"
 import CountBar from "@components/CountBar"
 import TagButton from "@components/TagButton"
 import FeatureSection from "@components/Home/FeatureSection"
 import ExploreSection from "@components/Home/ExploreSction"
 import AccordionFAQ from "@components/FAQs/AccordionFAQ"
-import Footer from "@components/Footer"
 
 const Home = () => {
   return (
     <>
-      <Header />
       <div className="w-full">
         <div className="w-10/12 mx-auto flex gap-24">
           <img src="assets/images/Home/Capture.PNG" className="w-3/5" alt="Banner" />
@@ -68,14 +65,13 @@ const Home = () => {
       <ExploreSection />
       <div className="w-full">
         <div className="w-10/12 mx-auto">
-            <TagButton text="FAQ" className="block mx-auto"/>
-            <span className="text-xl font-semibold ">
-              Discover worry-free transactions with SlasPay FAQs - yourr guide to a seamless financial journey.
-            </span>
-            <AccordionFAQ />
+          <TagButton text="FAQ" className="block mx-auto" />
+          <span className="text-xl font-semibold ">
+            Discover worry-free transactions with SlasPay FAQs - yourr guide to a seamless financial journey.
+          </span>
+          <AccordionFAQ />
         </div>
       </div>
-      <Footer />
     </>
   )
 }

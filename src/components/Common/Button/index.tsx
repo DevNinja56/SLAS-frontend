@@ -5,7 +5,7 @@ interface propTypes {
 }
 
 const Button = ({ text, className }: propTypes) => {
-  return <button className={`rounded-md ${className}`}>{text}</button>
+  return <button  type="submit" className={`rounded-md ${className}`}>{text}</button>
 }
 
 export default Button

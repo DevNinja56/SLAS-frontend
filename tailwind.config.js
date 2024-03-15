@@ -10,7 +10,8 @@ module.exports = {
         BGGrey: "#FAFAFA",
         SearchBorderColor: "#4BB095",
         FooterBgColor: "#303030",
-        SubmitButtonColor : "#0A9800"
+        SubmitButtonColor : "#0A9800",
+        FormBGColor : "#EBF6FC"
       },
       lineHeight: {
         headingLineHeight: "3rem"

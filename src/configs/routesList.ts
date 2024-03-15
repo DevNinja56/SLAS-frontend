@@ -4,9 +4,15 @@ import Contact from "@views/Contact"
 import FAQ from "@views/FAQ"
 import Home from "@views/Home"
 import Features from "@views/Features"
+import SignUp from "@views/Auth/SignUp"
 import { URL } from "./index"
 
 export const ROUTE_LIST = [
+  {
+    link: URL.SIGN_UP,
+    element: SignUp,
+    isLayout: true
+  },
   {
     link: URL.HOME,
     element: Home,

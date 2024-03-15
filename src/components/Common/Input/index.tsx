@@ -8,7 +8,7 @@ interface propsType extends InputHTMLAttributes<HTMLInputElement> {
     icon?: IconType;
     error?: string;
     customInputClass?: string;
-    type?: 'text' | 'password' | 'dob' | 'tel';
+    type?: 'text' | 'password' | 'dob' | 'tel' | 'email';
 }
 
 const InputBox = React.forwardRef<HTMLInputElement, propsType>(
@@ -32,7 +32,7 @@ const InputBox = React.forwardRef<HTMLInputElement, propsType>(
             <label
                 htmlFor={'input-box--' + (id ?? name)}
                 className={`text-sm md:text-lg flex flex-col gap-y-1 w-full ${
-                    error ? ' text-red-600 ' : 'text-black'
+                    error ? ' text-red-600 ' : 'text-GreenBgColor'
                 }`}
             >
                 {title}

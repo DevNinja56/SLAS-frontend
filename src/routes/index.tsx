@@ -16,7 +16,19 @@ const MainRouter = () => {
       <UseScrollToTop />
       <Routes>
         {ROUTE_LIST.map(({ link, element: Component, isLayout }, i) => (
-          <Route key={"routes---" + i} path={link} element={<Component />} />
+          <Route
+            key={"routes---" + i}
+            path={link}
+            element={
+              isLayout ? (
+                <MainLayout>
+                  <Component />
+                </MainLayout>
+              ) : (
+                <Component />
+              )
+            }
+          />
         ))}
       </Routes>
     </Fragment>
