@@ -1,12 +1,21 @@
 import { URL } from "@configs/index"
-import React from "react"
+import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
+import SideBar from "@components/SideBarSection"
 
 const Header = () => {
+  const [showSidebar, setShowSidebar] = useState(false)
+
+  const toggleSidebar = () => {
+    console.log("yes")
+    setShowSidebar(!showSidebar)
+  }
+
   return (
-    <div className="flex w-full">
+    <div className="flex w-full relative">
       <div className="w-10/12 mx-auto flex justify-between my-8">
-        <span>logo</span>
+        <span className="cursor-pointer" onClick={toggleSidebar}>logo</span>
+        {showSidebar && <SideBar onClose={toggleSidebar} />}
         <div className="flex gap-16">
           <NavLink to={URL.HOME} className="font-semibold">
             Home
