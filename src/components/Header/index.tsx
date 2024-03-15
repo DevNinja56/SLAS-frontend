@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom"
 const Header = () => {
   return (
     <div className="flex w-full">
-      <div className="w-11/12 mx-auto flex justify-between my-8">
+      <div className="w-10/12 mx-auto flex justify-between my-8">
         <span>logo</span>
         <div className="flex gap-16">
           <NavLink to={URL.HOME} className="font-semibold">

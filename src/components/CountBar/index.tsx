@@ -3,7 +3,7 @@ import { MdOutlineFileDownload } from "react-icons/md"
 
 const CountBar = () => {
   return (
-    <div className="flex bg-GreenBgColor gap-4 w-11/12 mx-auto justify-between rounded-3xl p-8 mt-8">
+    <div className="flex bg-GreenBgColor gap-4 w-10/12 mx-auto justify-between rounded-3xl p-8 mt-8">
       <div className="flex gap-2 items-center">
         <MdOutlineFileDownload className="text-white text-5xl" />
         <p className="flex flex-col">
