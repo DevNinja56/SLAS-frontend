@@ -5,23 +5,25 @@ import TagButton from "@components/TagButton"
 import FeatureSection from "@components/Home/FeatureSection"
 import ExploreSection from "@components/Home/ExploreSction"
 import AccordionFAQ from "@components/FAQs/AccordionFAQ"
+import StartChat from "@components/Home/StartChat"
+import { FaArrowRight } from "react-icons/fa6";
 
 const Home = () => {
   return (
     <>
       <div className="w-full">
-        <div className="w-10/12 mx-auto flex gap-24">
-          <img src="assets/images/Home/Capture.PNG" className="w-3/5" alt="Banner" />
-          <div className="flex flex-col gap-4 pt-8">
-            <span className="text-4xl leading-headingLineHeight w-3/5 font-semibold">
+        <div className="w-10/12 mx-auto flex gap-12">
+          <img src="assets/images/Home/Capture.PNG" className="w-4/5" alt="Banner" />
+          <div className="flex flex-col gap-4 pt-8 w-3/5">
+            <span className="text-4xl leading-headingLineHeight font-bold">
               Experience a payment solution for seamless property transactions across continents.
             </span>
-            <p className="w-4/6 text-sm font-medium leading-6">
+            <p className=" text-sm font-medium leading-6">
               <span className="font-bold"> Welcome to SlasPay! </span>Sign up, download the app, and experience seamless
               cross-border transactions. Redefine the way you transact -
               <span className="text-OrangeTextColor font-medium"> START TODAY!</span>
             </p>
-            <Button text="Get Started" className="bg-GreenBgColor p-4 font-xl font-medium text-white w-1/5 mt-12" />
+            <Button text="Get Started" icon={<FaArrowRight className="text-white inline font-xl font-medium"/>} className="bg-GreenBgColor p-4 font-xl font-medium text-white w-1/3 mt-12" />
           </div>
         </div>
         <CountBar />
@@ -62,11 +64,12 @@ const Home = () => {
         </div>
       </div>
       <FeatureSection />
+      <StartChat />
       <ExploreSection />
       <div className="w-full">
         <div className="w-10/12 mx-auto">
-          <TagButton text="FAQ" className="block mx-auto" />
-          <span className="text-xl font-semibold ">
+          <TagButton text="FAQ" className="block mx-auto px-4 mb-4" />
+          <span className="text-2xl font-semibold ">
             Discover worry-free transactions with SlasPay FAQs - yourr guide to a seamless financial journey.
           </span>
           <AccordionFAQ />

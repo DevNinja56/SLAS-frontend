@@ -20,9 +20,9 @@ const FAQs = ({ item, index, onClick, clickHeading, tutorLastIndex }: propTypes)
       onClick={onClick}
       className={`${
         index === tutorLastIndex ? "" : " text-mainParaColor"
-      } flex flex-col cursor-pointer relative w-full rounded-md my-2`}
+      } flex flex-col cursor-pointer relative w-full rounded-md my-4 `}
     >
-      <div className="flex items-center justify-between rounded-xl py-4 px-4 drop-shadow-md bg-white">
+      <div className="flex items-center justify-between rounded-xl py-4 px-4 drop-shadow-md bg-white ">
         <h3 className="text-xl font-semibold text-mainParaColor">{item.question}</h3>
         <Button
           padding=""
@@ -33,7 +33,7 @@ const FAQs = ({ item, index, onClick, clickHeading, tutorLastIndex }: propTypes)
       </div>
       <p
         className={`text-xs md:text-sm text-mainLightBlackColor lg:text-base transition-all duration-300 drop-shadow-sm ${
-          clickHeading[index] ? "text-mainParaColor py-6 px-6 static visible drop-shadow-sm" : "invisible absolute opacity-0 top-20"
+          clickHeading[index] ? " text-mainParaColor py-6 px-6 static visible drop-shadow-sm" : "invisible absolute opacity-0 top-20"
         }`}
       >
         {item.answer}

@@ -1,5 +1,8 @@
 import React from "react"
 import { MdOutlineFileDownload } from "react-icons/md"
+import { FiUsers } from "react-icons/fi";
+import { BsGraphUpArrow } from "react-icons/bs";
+import { MdHeadsetMic } from "react-icons/md";
 
 const CountBar = () => {
   return (
@@ -8,28 +11,28 @@ const CountBar = () => {
         <MdOutlineFileDownload className="text-white text-5xl" />
         <p className="flex flex-col">
           <span className="text-white">DOWNLOADS</span>
-          <span className="text-OrangeTextColor">20,000</span>
+          <span className="text-OrangeTextColor font-bold">20,000</span>
         </p>
       </div>
       <div  className="flex gap-2 items-center">
-        <MdOutlineFileDownload className="text-white text-5xl" />
+        <FiUsers className="text-white text-5xl" />
         <p className="flex flex-col">
           <span className="text-white">HAPPY USERS</span>
-          <span className="text-OrangeTextColor">19,000</span>
+          <span className="text-OrangeTextColor font-bold">19,000</span>
         </p>
       </div>
       <div className="flex gap-2 items-center">
-        <MdOutlineFileDownload className="text-white text-5xl" />
+        <BsGraphUpArrow className="text-white text-5xl" />
         <p className="flex flex-col">
           <span className="text-white">BUSINESS GROWTH</span>
-          <span className="text-OrangeTextColor">Yearly 88.09%</span>
+          <span className="text-OrangeTextColor font-bold">Yearly 88.09%</span>
         </p>
       </div>
       <div className="flex gap-2 items-center">
-        <MdOutlineFileDownload className="text-white text-5xl" />
+        <MdHeadsetMic className="text-white text-5xl" />
         <p className="flex flex-col">
           <span className="text-white">EXPERT SUPORT</span>
-          <span className="text-OrangeTextColor">24*7</span>
+          <span className="text-OrangeTextColor font-bold">24*7</span>
         </p>
       </div>
     </div>

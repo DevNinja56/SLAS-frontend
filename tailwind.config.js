@@ -14,7 +14,7 @@ module.exports = {
         FormBGColor : "#EBF6FC"
       },
       lineHeight: {
-        headingLineHeight: "3rem"
+        headingLineHeight: "2.5rem"
       }
     }
   },

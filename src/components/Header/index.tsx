@@ -2,6 +2,7 @@ import { URL } from "@configs/index"
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
 import SideBar from "@components/SideBarSection"
+import { FaRegArrowAltCircleRight } from "react-icons/fa"
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false)
@@ -14,7 +15,7 @@ const Header = () => {
   return (
     <div className="flex w-full relative">
       <div className="w-10/12 mx-auto flex justify-between my-8">
-        <span className="cursor-pointer" onClick={toggleSidebar}>logo</span>
+        <img src="assets/images/Home/logo.PNG" alt="Logo" onClick={toggleSidebar} className="cursor-pointer" />
         {showSidebar && <SideBar onClose={toggleSidebar} />}
         <div className="flex gap-16">
           <NavLink to={URL.HOME} className="font-semibold">
@@ -42,7 +43,7 @@ const Header = () => {
             /
             <NavLink to={URL.SIGN_UP} className="font-semibold">
               {" "}
-              Sign Up
+              Sign Up <FaRegArrowAltCircleRight className="text-GreenBgColor inline" />
             </NavLink>
           </div>
         </div>
