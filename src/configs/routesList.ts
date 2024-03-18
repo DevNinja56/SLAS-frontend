@@ -6,6 +6,7 @@ import Home from "@views/Home"
 import Features from "@views/Features"
 import SignUp from "@views/Auth/SignUp"
 import SignIn from "@views/Auth/SignIn"
+import OTP from "@views/OTP"
 import { URL } from "./index"
 
 export const ROUTE_LIST = [
@@ -17,6 +18,11 @@ export const ROUTE_LIST = [
   {
     link: URL.SIGN_IN,
     element: SignIn,
+    isLayout: true
+  },
+  {
+    link: URL.OTP,
+    element: OTP,
     isLayout: true
   },
   {

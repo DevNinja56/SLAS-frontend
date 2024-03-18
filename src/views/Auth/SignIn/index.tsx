@@ -68,7 +68,7 @@ const SignIn = () => {
               type="password"
               customInputClass="px-2 py-[5px] text-[15px] rounded-md outline-none placeholder:text-md w-full"
             />
-            <NavLink to={URL.SIGN_IN} className="text-OrangeTextColor">
+            <NavLink to={URL.OTP} className="text-OrangeTextColor">
               Forgot Password?
             </NavLink>
             <Button text="LOGIN" className="bg-GreenBgColor text-white w-1/5 mx-40 px-4 py-2" />

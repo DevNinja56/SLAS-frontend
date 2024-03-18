@@ -19,7 +19,8 @@ export const URL = {
   SIGN_UP: "/sign-up",
   FORGOT_PASSWORD: "/forgot-password",
   RESET_PASSWORD: "/reset-password",
-  DASHBOARD: "/dashboard"
+  DASHBOARD: "/dashboard",
+  OTP: "/otp"
 }
 
 /* --- HTTP Request Methods --- */
