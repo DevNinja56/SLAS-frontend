@@ -13,7 +13,7 @@ const StartChat = () => {
             Empower your business transactions with SlasPay! Experience swift, secure, and efficient cross-border
             payments for global enterprises and startups alike.
           </p>
-          <Button text="Start Chat" icon={<FaArrowRight className="inline"/>}  className="ml-64 w-1/4 p-4 font-medium text-GreenBgColor bg-white"/>
+          <Button text="Start Chat" icon={<FaArrowRight className="inline"/>}  className=" rounded-md ml-64 w-1/4 p-4 font-medium text-GreenBgColor bg-white"/>
         </div>
       </div>
     </div>

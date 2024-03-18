@@ -71,7 +71,7 @@ const SignIn = () => {
             <NavLink to={URL.OTP} className="text-OrangeTextColor">
               Forgot Password?
             </NavLink>
-            <Button text="LOGIN" className="bg-GreenBgColor text-white w-1/5 mx-40 px-4 py-2" />
+            <Button text="LOGIN" className="bg-GreenBgColor text-white w-1/5 mx-40 px-4 py-2 rounded-md" />
             <p className="text-center font-medium mt-4">
               Are you a new user?{" "}
               <NavLink to={URL.SIGN_UP} className="text-OrangeTextColor">

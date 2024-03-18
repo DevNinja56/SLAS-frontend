@@ -23,7 +23,7 @@ const Home = () => {
               cross-border transactions. Redefine the way you transact -
               <span className="text-OrangeTextColor font-medium"> START TODAY!</span>
             </p>
-            <Button text="Get Started" icon={<FaArrowRight className="text-white inline font-xl font-medium"/>} className="bg-GreenBgColor p-4 font-xl font-medium text-white w-1/3 mt-12" />
+            <Button text="Get Started" icon={<FaArrowRight className="text-white inline font-xl font-medium rounded-md"/>} className="bg-GreenBgColor p-4 font-xl font-medium text-white w-1/3 mt-12" />
           </div>
         </div>
         <CountBar />

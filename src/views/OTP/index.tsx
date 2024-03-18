@@ -18,7 +18,7 @@ const OTP = () => {
               onChange={setOtp}
               numInputs={4}
               renderSeparator={<span>-</span>}
-              renderInput={(props) => <input {...props} className="w-12 h-12"/>}
+              renderInput={(props) => <input {...props} className="w-12 h-12 "/>}
             />
           </div>
           <div>
@@ -32,7 +32,7 @@ const OTP = () => {
               renderInput={(props) => <input {...props}  className="w-12 h-12"/>}
             />
           </div>
-          <Button text="CONTINUE" className="bg-GreenBgColor text-white w-1/5 mx-40 px-4 py-2" />
+          <Button text="CONTINUE" className="bg-GreenBgColor text-white w-1/5 mx-40 px-4 py-2 rounded-md" />
         </form>
       </div>
     </div>

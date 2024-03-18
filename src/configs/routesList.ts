@@ -7,6 +7,7 @@ import Features from "@views/Features"
 import SignUp from "@views/Auth/SignUp"
 import SignIn from "@views/Auth/SignIn"
 import OTP from "@views/OTP"
+import Dashboard from "@views/Dashboard"
 import { URL } from "./index"
 
 export const ROUTE_LIST = [
@@ -54,10 +55,10 @@ export const ROUTE_LIST = [
     link: URL.FEATURES,
     element: Features,
     isLayout: true
+  },
+  {
+    link: URL.DASHBOARD,
+    element: Dashboard,
+    isLayout: false
   }
-  //   {
-  //     link: route path,
-  //     element: component,
-  //     isLayout: true / false
-  //   },
 ]

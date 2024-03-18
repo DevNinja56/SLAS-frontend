@@ -14,7 +14,7 @@ const ExploreSection = () => {
             Are you ready to embark on a fulfilling career journey? at <span className="font-medium">Slas</span>
             <span className="text-OrangeTextColor font-medium">Pay</span>, we believe in fostering talent, creativity, and innovation. Join our dynamic team, where your skills are valued
           </p>
-          <Button text="Join Us"  icon={<FaArrowRight className="inline"/>} className="bg-GreenBgColor p-4 font-xl font-medium text-white w-1/5 mt-8" />
+          <Button text="Join Us"  icon={<FaArrowRight className="inline"/>} className="rounded-md bg-GreenBgColor p-4 font-xl font-medium text-white w-1/5 mt-8" />
         </div>
         <img src="assets/images/Home/explore.PNG" className="w-3/5" alt="Banner" />
       </div>

@@ -9,7 +9,6 @@ interface LayoutProps {
 const MainLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main id="main">
-      {/* <div>Left Navigation</div> */}
       <Header />
       <div>{children}</div>
       <Footer />

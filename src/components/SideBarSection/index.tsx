@@ -63,7 +63,12 @@ const SideBar = (onClose: any) => {
         <div className="flex flex-col gap-2">
           <label className="text-GreenBgColor">Mobile Number</label>
           <div>
-            <PhoneInput defaultCountry="ua" value={phone} onChange={(phone) => setPhone(phone)} />
+            <PhoneInput
+              defaultCountry="ua"
+              inputClassName={"w-PhoneFiledWidth"}
+              value={phone}
+              onChange={(phone) => setPhone(phone)}
+            />
           </div>
         </div>
         <div className="flex flex-col gap-2">
@@ -86,7 +91,7 @@ const SideBar = (onClose: any) => {
             />
           </div>
         </div>
-        <Button text="SUBMIT QUERY" className="bg-SubmitButtonColor text-white rounded-3xl font-medium w-2/6 p-4"/>
+        <Button text="SUBMIT QUERY" className="bg-SubmitButtonColor text-white rounded-full font-medium w-2/6 p-4 ml-80" />
       </form>
     </div>
   )
