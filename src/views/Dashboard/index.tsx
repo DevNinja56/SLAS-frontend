@@ -5,6 +5,7 @@ import CurrencyLineChart from "@components/LineChart"
 import ExchangeRate from "@components/Dashboard/ExchangeRate"
 import TransferMoney from "@components/Dashboard/TransferMoney"
 import DashboardTable from "@components/Dashboard/Table"
+import UpcomingPayment from "@components/Dashboard/UpcomingPayment"
 
 const currencyData = [
   { month: "Jan", currency1: 500, currency2: 600 },
@@ -26,6 +27,7 @@ const Dashboard = () => {
           {/* <CurrencyLineChart data={currencyData} /> */}
           {/* <ExchangeRate /> */}
           {/* <TransferMoney /> */}
+          <UpcomingPayment />
           <DashboardTable />
         </div>
       </div>
