@@ -2,6 +2,10 @@ import React from "react"
 import DashboardSidebar from "@components/Dashboard/DashboardSidebar"
 import Navbar from "@components/Dashboard/Navbar"
 import CurrencyLineChart from "@components/LineChart"
+import ExchangeRate from "@components/Dashboard/ExchangeRate"
+import TransferMoney from "@components/Dashboard/TransferMoney"
+import DashboardTable from "@components/Dashboard/Table"
+
 const currencyData = [
   { month: "Jan", currency1: 500, currency2: 600 },
   { month: "Feb", currency1: 550, currency2: 620 },
@@ -19,7 +23,10 @@ const Dashboard = () => {
       <div>
         <Navbar />
         <div>
-        <CurrencyLineChart data={currencyData} />
+          {/* <CurrencyLineChart data={currencyData} /> */}
+          {/* <ExchangeRate /> */}
+          {/* <TransferMoney /> */}
+          <DashboardTable />
         </div>
       </div>
     </div>
