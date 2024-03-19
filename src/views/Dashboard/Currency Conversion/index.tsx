@@ -1,9 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import CurrencyLineChart from "@components/LineChart"
-import { GoDotFill } from "react-icons/go"
-import { IoIosArrowDown } from "react-icons/io"
-import { SlCalender } from "react-icons/sl"
-import CurrencyChange from "@components/Dashboard/CurrenecyChange"
+import ConversionAmount from "@components/Dashboard/CurrencyConversion"
+import ConversionTable from "@components/Dashboard/CurrencyConversion/Table"
 
 const currencyData = [
   { month: "Jan", currency1: 500, currency2: 600 },
@@ -16,18 +14,29 @@ const currencyData = [
 ]
 
 const CurrencyGraph = () => {
+  const [showTable, setShowTable] = useState(false)
+
+  const handleButtonClick = () => {
+    console.log("click button")
+    setShowTable(!showTable)
+  }
+
   return (
     <div>
       <div className="flex gap-4 p-4">
-        <CurrencyChange />
-        <div className="flex p-2 flex-col gap-4 rounded-lg w-8/12 border border-gray-200">
-          <div className="flex justify-between">
-            <span className="text-xl font-medium">Currency Tracking </span>
+        <ConversionAmount onButtonClick={handleButtonClick} />
+        {showTable ? (
+          <ConversionTable />
+        ) : (
+          <div className="flex p-2 flex-col gap-4 rounded-lg w-8/12 border border-gray-200">
+            <div className="">
+              <div className="flex justify-between">
+                <span className="text-xl font-medium">Currency Tracking </span>
+              </div>
+              <CurrencyLineChart data={currencyData} />
+            </div>
           </div>
-          <div className="">
-            <CurrencyLineChart data={currencyData} />
-          </div>
-        </div>
+        )}
       </div>
     </div>
   )
