@@ -20,7 +20,17 @@ const PrivateRoute = () => {
     }
   }, [isAuthenticated, isLoading])
 
-  return <>{isAuthenticated && token ? <Outlet /> : "Loading..."}</>
+  return (
+    <>
+      {isAuthenticated && token ? (
+        <>
+          <Outlet />
+        </>
+      ) : (
+        "Loading..."
+      )}
+    </>
+  )
 }
 
 export default PrivateRoute

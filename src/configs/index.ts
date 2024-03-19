@@ -10,11 +10,19 @@ export const AWS_S3_BUCKET = process.env.REACT_APP_AWS_S3_BUCKET || ""
 /* --- App Router Endpoints --- */
 export const URL = {
   HOME: "/",
+  ABOUT: "/about",
+  BUSINESS: "/business",
+  CONTACT: "/contact",
+  FAQ: "/faq",
+  FEATURES: "/features",
   SIGN_IN: "/sign-in",
   SIGN_UP: "/sign-up",
   FORGOT_PASSWORD: "/forgot-password",
   RESET_PASSWORD: "/reset-password",
-  DASHBOARD: "/dashboard"
+  DASHBOARD: "/dashboard",
+  OTP: "/otp",
+  CURRENCY: "/currency",
+  CURRENCY_CONVERSION: "/currency-conversion",
 }
 
 /* --- HTTP Request Methods --- */
