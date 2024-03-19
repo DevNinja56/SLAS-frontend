@@ -20,7 +20,9 @@ export const URL = {
   FORGOT_PASSWORD: "/forgot-password",
   RESET_PASSWORD: "/reset-password",
   DASHBOARD: "/dashboard",
-  OTP: "/otp"
+  OTP: "/otp",
+  CURRENCY: "/currency",
+  CURRENCY_CONVERSION: "/currency-conversion",
 }
 
 /* --- HTTP Request Methods --- */

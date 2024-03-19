@@ -9,56 +9,63 @@ import SignIn from "@views/Auth/SignIn"
 import OTP from "@views/OTP"
 import Dashboard from "@views/Dashboard"
 import { URL } from "./index"
+import CurrencyChange from "@components/Dashboard/CurrenecyChange"
+import CurrencyGraph from "@views/Dashboard/Currency Conversion"
 
 export const ROUTE_LIST = [
   {
     link: URL.SIGN_UP,
     element: SignUp,
-    isLayout: true
+    isLayout: false
   },
   {
     link: URL.SIGN_IN,
     element: SignIn,
-    isLayout: true
+    isLayout: false
   },
   {
     link: URL.OTP,
     element: OTP,
-    isLayout: true
+    isLayout: false
   },
   {
     link: URL.HOME,
     element: Home,
-    isLayout: true
+    isLayout: false
   },
   {
     link: URL.ABOUT,
     element: About,
-    isLayout: true
+    isLayout: false
   },
   {
     link: URL.BUSINESS,
     element: Business,
-    isLayout: true
+    isLayout: false
   },
   {
     link: URL.CONTACT,
     element: Contact,
-    isLayout: true
+    isLayout: false
   },
   {
     link: URL.FAQ,
     element: FAQ,
-    isLayout: true
+    isLayout: false
   },
   {
     link: URL.FEATURES,
     element: Features,
-    isLayout: true
+    isLayout: false
   },
   {
     link: URL.DASHBOARD,
     element: Dashboard,
-    isLayout: false
-  }
+    isLayout: true
+  },
+  {
+    link: URL.CURRENCY_CONVERSION,
+    element: CurrencyGraph,
+    isLayout: true
+  },
 ]

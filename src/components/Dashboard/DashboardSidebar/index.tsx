@@ -13,13 +13,13 @@ const DashboardSidebar = () => {
         Dashboard
       </NavLink>
       <NavLink
-        to={URL.HOME}
+        to={URL.CURRENCY_CONVERSION}
         className="py-4 px-8 hover:bg-DashboardBgColor hover:border-GreenBgColor hover:border-l-8 border-b-2 border-gray-200 font-bold"
       >
         Currency Conversion
       </NavLink>
       <NavLink
-        to={URL.HOME}
+        to={URL.CURRENCY}
         className="py-4 px-8 hover:bg-DashboardBgColor hover:border-GreenBgColor hover:border-l-8 border-b-2 border-gray-200 font-bold"
       >
         Payment Options

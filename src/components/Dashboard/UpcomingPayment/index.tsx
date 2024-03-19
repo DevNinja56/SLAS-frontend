@@ -3,23 +3,23 @@ import Button from "@components/Common/Button"
 
 const UpcomingPayment = () => {
   return (
-    <div className="flex flex-col gap-4 bg-DashboardBgColor rounded">
-      <span className="text-xl text-semibold">Upcoming Payments</span>
-      <div className="flex gap-6 p-4">
-        <div className="flex flex-col gap-4 bg-white border border-gray-300 rounded py-4 px-8 text-center">
-          <span className="text-OrangeTextColor">Credit Card Bill</span>
+    <div className="flex flex-col gap-4 bg-DashboardBgColor rounded-lg py-4">
+      <span className="text-xl text-semibold px-4 font-medium">Upcoming Payments</span>
+      <div className="flex gap-6 px-4">
+        <div className="flex flex-col gap-2 bg-white border border-gray-300 rounded py-4 px-4 text-center">
+          <span className="text-OrangeTextColor font-medium">Credit Card Bill</span>
           <span className="text-GreenBgColor">$580</span>
           <Button text="PAY NOW" className="bg-green-500  text-white p-1 rounded-full" />
         </div>
-        <div className="flex flex-col gap-4 bg-white border border-gray-300 rounded py-4 px-8  text-center">
-          <span className="text-OrangeTextColor">Electricity Bill</span>
+        <div className="flex flex-col gap-2 bg-white border border-gray-300 rounded py-4 px-4  text-center">
+          <span className="text-OrangeTextColor font-medium">Electricity Bill</span>
           <span className="text-GreenBgColor">$780</span>
           <Button text="PAY NOW" className="bg-green-500  text-white p-1 rounded-full" />
         </div>
-        <div className="flex flex-col gap-4 bg-white border border-gray-300 rounded py-4 px-8  text-center">
-          <span className="text-OrangeTextColor">Mobile Bill</span>
+        <div className="flex flex-col gap-2 bg-white border border-gray-300 rounded py-4 px-4  text-center">
+          <span className="text-OrangeTextColor font-medium">Mobile Phone Bill</span>
           <span className="text-GreenBgColor">$580</span>
-          <Button text="PAY NOW" className="bg-green-500  text-white rounded-full p-1" />
+          <Button text="PAY NOW" className="bg-green-500  text-white p-1 rounded-full" />
         </div>
       </div>
     </div>
