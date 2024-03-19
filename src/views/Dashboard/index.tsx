@@ -12,13 +12,13 @@ import { IoIosArrowDown } from "react-icons/io"
 import { SlCalender } from "react-icons/sl"
 
 const currencyData = [
-  { month: "Jan", currency1: 500, currency2: 600 },
-  { month: "Feb", currency1: 550, currency2: 620 },
-  { month: "Mar", currency1: 600, currency2: 640 },
-  { month: "Apr", currency1: 620, currency2: 670 },
-  { month: "May", currency1: 650, currency2: 690 },
-  { month: "Jun", currency1: 700, currency2: 720 },
-  { month: "Jul", currency1: 750, currency2: 740 }
+  { month: "Jan", currency1: 0, currency2: 60 },
+  { month: "Feb", currency1: -20, currency2: 54 },
+  { month: "Mar", currency1: 45, currency2: 64 },
+  { month: "Apr", currency1: 14, currency2: -70 },
+  { month: "May", currency1: 80, currency2: 0 },
+  { month: "Jun", currency1: -50, currency2: 30 },
+  { month: "Jul", currency1: 65, currency2: 40 }
 ]
 
 const Dashboard = () => {
@@ -50,7 +50,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="flex gap-4 p-4 ">
+      <div className="flex gap-4 pt-4 px-4 ">
         <div className="w-8/12 flex flex-col gap-4">
           <UpcomingPayment />
           <DashboardTable />

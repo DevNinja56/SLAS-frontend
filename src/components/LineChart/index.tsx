@@ -20,8 +20,8 @@ const CurrencyLineChart: React.FC<LineChartProps> = ({ data }) => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="currency1" stroke="#8884d8" activeDot={{ r: 8 }} />
-        <Line type="monotone" dataKey="currency2" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="currency1" stroke="#0097A7" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="currency2" stroke="#F4511E" />
       </LineChart>
     </ResponsiveContainer>
   );

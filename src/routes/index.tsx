@@ -23,14 +23,17 @@ const MainRouter = () => {
             path={link}
             element={
               isLayout ? (
-                <MainLayout >
-                  <Component />
-                </MainLayout>
+                <>
+                  <MainLayout>
+                    <Component />
+                  </MainLayout>
+                  <Footer />
+                </>
               ) : (
                 <>
-                <Header />
-                <Component />
-                <Footer />
+                  <Header />
+                  <Component />
+                  <Footer />
                 </>
               )
             }

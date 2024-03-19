@@ -5,7 +5,7 @@ import { BsBellFill } from "react-icons/bs"
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between p-4 w-full">
+    <div className="flex justify-between p-4 w-full bg-DashboardBgColor">
       <span className="text-OrangeTextColor font-bold text-2xl">Dashboard</span>
       <div className="flex justify-between items-center gap-4">
         <SearchInput placeholder="Search..." className="" />

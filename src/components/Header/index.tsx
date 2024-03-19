@@ -1,16 +1,24 @@
 import { URL } from "@configs/index"
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { NavLink } from "react-router-dom"
 import SideBar from "@components/SideBarSection"
 import { FaRegArrowAltCircleRight } from "react-icons/fa"
+import DropDownMenu from "@components/DropdownMenu"
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false)
+  const [showDropDown, setShowDropDown] = useState(false)
 
   const toggleSidebar = () => {
     console.log("yes")
     setShowSidebar(!showSidebar)
   }
+
+  const onShowDropDown = () => {
+    setShowDropDown(!showDropDown)
+  }
+
+  const dropDownRef = useRef<HTMLDivElement>(null)
 
   return (
     <div className="flex w-full relative">
@@ -27,9 +35,12 @@ const Header = () => {
           <NavLink to={URL.FEATURES} className="font-semibold">
             Features
           </NavLink>
-          <NavLink to={URL.BUSINESS} className="font-semibold">
-            Business
-          </NavLink>
+          <div onClick={onShowDropDown} ref={dropDownRef} className="cursor-pointer">
+            <span className="font-semibold">
+              Business
+            </span>
+            <DropDownMenu showDropDown={showDropDown} setShowDropDown={setShowDropDown} dropDownRef={dropDownRef} />
+          </div>
           <NavLink to={URL.FAQ} className="font-semibold">
             FAQ
           </NavLink>

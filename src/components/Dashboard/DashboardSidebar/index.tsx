@@ -5,7 +5,7 @@ import { URL } from "@configs/index"
 const DashboardSidebar = () => {
   return (
     <div className="flex flex-col w-3/12 shadow-lg">
-      <img src="assets/images/Home/logo.PNG" alt="Logo" className="w-40" />
+      <img src="assets/images/Home/logo.PNG" alt="Logo" className="w-40 mb-8 mx-auto" />
       <NavLink
         to={URL.DASHBOARD}
         className="py-4 px-8 hover:bg-DashboardBgColor hover:border-l-GreenBgColor hover:border-l-8 border-b-2 border-gray-200 font-bold"
@@ -52,7 +52,7 @@ const DashboardSidebar = () => {
         to={URL.HOME}
         className="py-4 px-8 hover:bg-DashboardBgColor hover:border-GreenBgColor hover:border-l-8 border-b-2 border-gray-200 font-bold"
       >
-        Siting
+        Sittings
       </NavLink>
     </div>
   )
