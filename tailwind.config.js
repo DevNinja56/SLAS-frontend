@@ -14,12 +14,14 @@ module.exports = {
         SubmitButtonColor : "#0A9800",
         FormBGColor : "#EBF6FC",
         LightGrayColor : "#f9f9f9",
+        MobileImageBgColor: "#FF986D",
       },
       lineHeight: {
-        headingLineHeight: "2.5rem"
+        headingLineHeight: "3rem"
       },
       width: {
-        PhoneFiledWidth: "27.5rem"
+        PhoneFiledWidth: "24rem",
+        CountryPhoneFiledWidth: "18rem"
       }
     }
   },

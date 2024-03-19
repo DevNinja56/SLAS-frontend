@@ -6,31 +6,32 @@ import FeatureSection from "@components/Home/FeatureSection"
 import ExploreSection from "@components/Home/ExploreSction"
 import AccordionFAQ from "@components/FAQs/AccordionFAQ"
 import StartChat from "@components/Home/StartChat"
+import GoogleSection from "@components/Home/GoogleSection"
 import { FaArrowRight } from "react-icons/fa6";
 
 const Home = () => {
   return (
     <>
       <div className="w-full">
-        <div className="w-10/12 mx-auto flex gap-12">
-          <img src="assets/images/Home/Capture.PNG" className="w-4/5 h-[450px]" alt="Banner" />
+        <div className="w-10/12 mx-auto flex gap-12 mb-8">
+          <img src="assets/images/Home/Capture.PNG" className="w-6/12 h-[450px]" alt="Banner" />
           <div className="flex flex-col gap-4 pt-8 w-3/5">
-            <span className="text-4xl leading-headingLineHeight font-bold">
+            <span className="text-4xl leading-headingLineHeight font-bold w-2/3">
               Experience a payment solution for seamless property transactions across continents.
             </span>
-            <p className=" text-sm font-medium leading-6">
+            <p className=" text-sm font-semibold leading-6  w-3/4">
               <span className="font-bold"> Welcome to SlasPay! </span>Sign up, download the app, and experience seamless
               cross-border transactions. Redefine the way you transact -
               <span className="text-OrangeTextColor font-medium"> START TODAY!</span>
             </p>
-            <Button text="Get Started" icon={<FaArrowRight className="text-white inline font-xl font-medium rounded-md"/>} className="bg-GreenBgColor p-4 font-xl font-medium text-white w-1/3 mt-12 rounded-lg" />
+            <Button text="Get Started" icon={<FaArrowRight className="text-white inline text-2xl font-medium rounded-md"/>} className="bg-GreenBgColor p-4 text-2xl font-medium text-white w-2/5 mt-12 rounded-lg" />
           </div>
         </div>
         <CountBar />
       </div>
       <div className="w-10/12 mx-auto">
         <TagButton text="About Us" className="my-12" />
-        <div className="flex w-full gap-7 mt-6 mb-12">
+        <div className="flex w-full gap-7 mb-12">
           <div className="flex flex-col w-6/12 gap-3">
             <span className="font-bold text-xl leading-headingLineHeight">
               Revolutionize Global Transactions With Slaspay! Speed, Security, And Simplicity In One Fintech Solution.
@@ -66,6 +67,7 @@ const Home = () => {
       <FeatureSection />
       <StartChat />
       <ExploreSection />
+      <GoogleSection />
       <div className="w-full">
         <div className="w-10/12 mx-auto">
           <TagButton text="FAQ" className="block mx-auto px-4 mb-4" />

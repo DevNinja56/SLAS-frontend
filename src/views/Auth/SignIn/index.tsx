@@ -15,9 +15,6 @@ const SignIn = () => {
     register,
     handleSubmit: fromSubmit,
     formState: { errors },
-    setValue,
-    reset,
-    watch
   } = useForm<formType>()
 
   const handleSubmit = ({ email, password }: formType) => {
@@ -29,7 +26,7 @@ const SignIn = () => {
       <div className="flex w-9/12 mx-auto gap-12">
         <div className="bg-FormBGColor p-8 rounded-md w-2/4">
           <Heading text="Hi, Welcome Back!" />
-          <p>Enter you details to Login</p>
+          <p className="py-4">Enter you details to Login</p>
           <form className="flex flex-col gap-5" onSubmit={fromSubmit(handleSubmit)}>
             <InputBox
               {...register("email", {
@@ -45,7 +42,7 @@ const SignIn = () => {
               type="email"
               autoComplete="off"
               className="p-0"
-              customInputClass="px-2 py-[5px] text-[15px] rounded-md outline-none placeholder:text-md w-full"
+              customInputClass="px-2 py-[10px] text-[15px] rounded-md outline-none placeholder:text-md w-full"
             />
             <InputBox
               {...register("password", {
@@ -66,12 +63,12 @@ const SignIn = () => {
               autoComplete="off"
               className="p-0"
               type="password"
-              customInputClass="px-2 py-[5px] text-[15px] rounded-md outline-none placeholder:text-md w-full"
+              customInputClass="px-2 py-[10px] text-[15px] rounded-md outline-none placeholder:text-md w-full"
             />
             <NavLink to={URL.OTP} className="text-OrangeTextColor">
               Forgot Password?
             </NavLink>
-            <Button text="LOGIN" className="bg-GreenBgColor text-white w-1/5 mx-40 px-4 py-2 rounded-md" />
+            <Button text="LOGIN" className="bg-GreenBgColor text-white w-4/12 font-medium mx-40 px-4 py-2 rounded-md" />
             <p className="text-center font-medium mt-4">
               Are you a new user?{" "}
               <NavLink to={URL.SIGN_UP} className="text-OrangeTextColor">

@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
       <div className="flex justify-between py-8 px-28">
         <div className="flex flex-col gap-2">
-          <img src="assets/images/Home/footerLogo.PNG" className= "w-1/4" alt="logo" />
+          <img src="assets/images/Home/footerLogo.PNG" className= "w-2/5" alt="logo" />
           <p className="text-white w-2/4">The optimal payment solution for you and your business.</p>
           <p className="text-white">@2023 SLasPay. All right reserved</p>
         </div>
