@@ -8,8 +8,8 @@ const CurrencyChange = () => {
     <div className="flex flex-col gap-2 w-4/12">
       <div className="flex p-2 bg-DashboardBgColor rounded-lg justify-between">
         <p className="flex flex-col">
-          <span className="text-GreenBgColor  font-bold">Your Wallet Balance</span>
-          <span className="text-OrangeTextColor text-xl font-bold">$5792.323</span>
+          <span className="text-OrangeTextColor  font-bold">Your Wallet Balance</span>
+          <span className="text-GreenBgColor text-xl font-bold">$5792.323</span>
         </p>
         <TagButton text="-0.89%" className="bg-purple-200 rounded-full text-red-500" />
       </div>

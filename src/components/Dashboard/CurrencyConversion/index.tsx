@@ -29,7 +29,7 @@ const ConversionAmount = ({ onButtonClick }: propTypes) => {
           onChange={(phone) => setPhone(phone)}
         />
         <div className="flex gap-3">
-          <Button text="CLEAR" className="bg-gray-500 rounded-full font-bold px-4 py-2" />
+          <Button text="CLEAR" className="bg-slate-400 rounded-full font-bold px-4 py-2" />
           <Button
             text="CONTINUE"
             onClick={onButtonClick}

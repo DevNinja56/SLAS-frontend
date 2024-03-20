@@ -11,8 +11,11 @@ const ListOption = [
   { value: "option2", label: "Option 2" },
   { value: "option3", label: "Option 3" }
 ]
+ interface propType {
+  onClose: any
+ }
 
-const SideBar = (onClose: any) => {
+const SideBar = ({onClose}: propType) => {
   const [phone, setPhone] = useState("")
   return (
     <div className="absolute top-0 left-56 bg-white w-5/12 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 ">

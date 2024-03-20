@@ -7,7 +7,7 @@ const OTP = () => {
   const [otp, setOtp] = useState("")
   return (
     <div className="w-full">
-      <div className="bg-FormBGColor w-2/4 mx-auto my-12 p-8 rounded-md">
+      <div className="bg-FormBGColor w-2/6 mx-auto my-12 p-8 rounded-md">
         <Heading text="Please Enter OTP" className="text-center mb-4" />
         <form className="flex flex-col gap-5">
           <div className="flex flex-col gap-2">
@@ -38,7 +38,7 @@ const OTP = () => {
               />
             </p>
           </div>
-          <Button text="CONTINUE" className="bg-GreenBgColor text-white w-1/5 mx-60 px-4 py-2 rounded-md" />
+          <Button text="CONTINUE" className="bg-GreenBgColor text-white w-2/6 mx-32 px-4 py-2 rounded-md" />
         </form>
       </div>
     </div>
