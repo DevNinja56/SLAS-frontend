@@ -23,7 +23,7 @@ const ProfileDropdown: React.FC<DropDownProps> = ({ showDropDown, setShowDropDow
   return (
     <div>
       {showDropDown ? (
-        <div className="w-[160px] py-2 custom-shadow absolute top-[60px] right-1 shadow-md bg-white cursor-pointer showDropDown rounded-lg">
+        <div className="w-[160px] py-2 custom-shadow absolute top-[60px] right-1 shadow-md bg-white cursor-pointer showDropDown rounded-lg z-10">
           {allDropDowns.map(({ name, to = "" }) => (
             <NavLink
               key={"dropDown--" + name}

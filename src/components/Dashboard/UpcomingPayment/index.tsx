@@ -3,7 +3,7 @@ import Button from "@components/Common/Button"
 
 const UpcomingPayment = () => {
   return (
-    <div className="flex flex-col gap-4 bg-DashboardBgColor rounded-lg py-8">
+    <div className="flex flex-col gap-4 bg-DashboardBgColor rounded-lg py-4">
       <span className="text-xl text-semibold px-4 font-medium">Upcoming Payments</span>
       <div className="flex justify-between px-4">
         <div className="w-[30%] flex flex-col gap-2 bg-white border border-gray-300 rounded-lg py-4 px-4 text-center">
