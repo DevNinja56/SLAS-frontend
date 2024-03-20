@@ -6,30 +6,30 @@ import { IoIosArrowForward } from "react-icons/io"
 const TransferMoney = () => {
   return (
     <div className="bg-DashboardBgColor p-4 rounded-lg">
-      <div className="flex gap-4 border-b-2 border-gray-300 pb-8">
-        <div className="border-2 border-gray-300 rounded-lg py-4 px-4 bg-white relative">
-          <span className="text-sm font-medium ">
-            Wallet <br /> Transfer
+      <div className="flex justify-between border-b-2 border-gray-300 pb-4">
+        <div className="border-2 border-gray-300 rounded-xl py-2 px-2 bg-white relative pb-6 w-24">
+          <span className="text-base font-medium ">
+            Wallet Transfer
           </span>
-          <IoIosArrowForward className="absolute bottom-0 right-0 bg-OrangeTextColor text-white rounded-tl-lg rounded-br-lg text-xl" />
+          <IoIosArrowForward className="absolute bottom-0 right-0 bg-OrangeTextColor text-white rounded-tl-xl rounded-br-lg text-2xl" />
         </div>
-        <div className="border-2 border-gray-300 rounded-lg py-4 px-4 bg-white relative">
-          <span className="text-sm font-medium ">
-            Transfer <br /> to Other
+        <div className="border-2 border-gray-300 rounded-xl py-2 px-2 bg-white relative pb-6 w-24">
+          <span className="font-medium text-base">
+            Transfer to Other
           </span>
-          <IoIosArrowForward className="absolute bottom-0 right-0 bg-OrangeTextColor text-white rounded-tl-lg rounded-br-lg text-xl" />
+          <IoIosArrowForward className="absolute bottom-0 right-0 bg-OrangeTextColor text-white rounded-tl-xl rounded-br-lg text-2xl" />
         </div>
-        <div className="border-2 border-gray-300 rounded-lg py-4 px-4 bg-white relative">
-          <span className="text-sm font-medium ">
-            Self <br /> Transfer
+        <div className="border-2 border-gray-300 rounded-xl py-2 px-2 bg-white relative pb-6 w-24">
+          <span className="text-base font-medium ">
+            Self Transfer
           </span>
-          <IoIosArrowForward className="absolute bottom-0 right-0 bg-OrangeTextColor text-white rounded-tl-lg rounded-br-lg text-xl" />
+          <IoIosArrowForward className="absolute bottom-0 right-0 bg-OrangeTextColor text-white rounded-tl-xl rounded-br-lg text-2xl" />
         </div>
       </div>
       <Button
         text="Transfer Money"
         icon={<MdOutlineCurrencyExchange className="inline" />}
-        className="text-white text-3xl font-bold bg-GreenBgColor rounded-md p-4 mt-4"
+        className="w-full text-white text-2xl font-medium bg-GreenBgColor rounded-md p-4 mt-4 mx-auto"
       />
     </div>
   )

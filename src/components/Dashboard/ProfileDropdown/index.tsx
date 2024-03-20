@@ -1,19 +1,13 @@
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
-import { URL } from "@configs/index"
-import SideBar from "@components/SideBarSection"
 
 interface DropDownProps {
   showDropDown: boolean
   setShowDropDown: React.Dispatch<React.SetStateAction<boolean>>
   dropDownRef?: React.RefObject<HTMLDivElement>
 }
-const DropDownMenu: React.FC<DropDownProps> = ({ showDropDown, setShowDropDown, dropDownRef }) => {
-  const [showSidebar, setShowSidebar] = useState(false)
-  const toggleSidebar = () => {
-    setShowSidebar(!showSidebar)
-  }
 
+const ProfileDropdown: React.FC<DropDownProps> = ({ showDropDown, setShowDropDown, dropDownRef }) => {
   const handleClickOutsideDropDown = (event: MouseEvent) => {
     if (showDropDown && dropDownRef?.current && !dropDownRef.current.contains(event.target as Node)) {
       setShowDropDown(false)
@@ -22,20 +16,18 @@ const DropDownMenu: React.FC<DropDownProps> = ({ showDropDown, setShowDropDown, 
 
   window.addEventListener("click", handleClickOutsideDropDown)
   const allDropDowns = [
-    { name: "Partner Api", to: "" },
-    { name: "Send Bulk Money", to: URL.BUSINESS }
+    { name: "My Profile", to: "" },
+    { name: "Logout", to: "" }
   ]
 
   return (
     <div>
-      {showSidebar && <SideBar onClose={toggleSidebar} />}
       {showDropDown ? (
-        <div className="w-[200px] py-2 custom-shadow absolute top-[55px] shadow-md bg-white cursor-pointer showDropDown rounded-lg">
+        <div className="w-[160px] py-2 custom-shadow absolute top-[60px] right-1 shadow-md bg-white cursor-pointer showDropDown rounded-lg z-10">
           {allDropDowns.map(({ name, to = "" }) => (
             <NavLink
               key={"dropDown--" + name}
               to={to}
-              onClick={name === "Partner Api" ? toggleSidebar : undefined}
               className="w-full block py-[9px] pl-[15px] hover:bg-profileBgColor text-lightGrayColor hover:text-darkTextBlueColor"
             >
               <p className="flex items-center gap-x-2 font-semibold">{name}</p>
@@ -49,4 +41,4 @@ const DropDownMenu: React.FC<DropDownProps> = ({ showDropDown, setShowDropDown, 
   )
 }
 
-export default DropDownMenu
+export default ProfileDropdown

@@ -13,7 +13,7 @@ interface LineChartProps {
 
 const CurrencyLineChart: React.FC<LineChartProps> = ({ data }) => {
   return (
-    <ResponsiveContainer width="100%" height={250}>
+    <ResponsiveContainer width="100%" height={200}>
       <LineChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="month" />

@@ -24,10 +24,10 @@ const SignIn = () => {
   return (
     <div className="w-full">
       <div className="flex w-9/12 mx-auto gap-12">
-        <div className="bg-FormBGColor p-8 rounded-md w-2/4">
+        <div className="bg-FormBGColor p-8 rounded-3xl w-2/4">
           <Heading text="Hi, Welcome Back!" />
-          <p className="py-4">Enter you details to Login</p>
-          <form className="flex flex-col gap-5" onSubmit={fromSubmit(handleSubmit)}>
+          <p className="pb-2 font-medium text-gray-400">Enter you details to Login</p>
+          <form className="flex flex-col gap-4" onSubmit={fromSubmit(handleSubmit)}>
             <InputBox
               {...register("email", {
                 required: "Email is required",
@@ -69,7 +69,7 @@ const SignIn = () => {
               Forgot Password?
             </NavLink>
             <Button text="LOGIN" className="bg-GreenBgColor text-white w-4/12 font-medium mx-40 px-4 py-2 rounded-md" />
-            <p className="text-center font-medium mt-4">
+            <p className="text-center font-medium">
               Are you a new user?{" "}
               <NavLink to={URL.SIGN_UP} className="text-OrangeTextColor">
                 Register

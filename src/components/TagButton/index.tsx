@@ -5,7 +5,7 @@ interface propTypes {
   }
 
 const TagButton = ({ text, className }: propTypes) => {
-  return <button className={`rounded-md ${className} bg-TagBGgray text-OrangeTextColor py-2 px-4 font-medium`}>{text}</button>
+  return <button className={`rounded-md ${className} bg-TagBGgray text-OrangeTextColor py-2 px-2 font-medium`}>{text}</button>
 }
 
 export default TagButton

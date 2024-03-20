@@ -3,7 +3,7 @@ import { Data } from "./Data"
 
 const ExchangeRate = () => {
   return (
-    <div className="bg-emerald-100 rounded-md flex flex-col gap-3 px-4 py-10">
+    <div className="bg-emerald-100 rounded-md flex flex-col gap-3 px-4 py-4">
       <span className="text-2xl font-semibold">Exchange Rate</span>
       {Data.map((item) => {
         return (

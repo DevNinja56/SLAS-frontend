@@ -14,26 +14,28 @@ const ConversionAmount = ({ onButtonClick }: propTypes) => {
     <div className="flex flex-col gap-2 w-4/12">
       <div className="flex flex-col gap-4 bg-purple-200 rounded-lg py-10 px-2">
         <p className="flex justify-between">
-          <span className="font-medium"> Conversion Amount</span>
+          <span className="font-medium text-2xl"> Conversion Amount</span>
         </p>
         <PhoneInput
           defaultCountry="ua"
+          inputStyle={{ padding: "25px" }}
           inputClassName={"w-CountryPhoneFiledWidth"}
           value={phone}
           onChange={(phone) => setPhone(phone)}
         />
         <PhoneInput
           defaultCountry="ua"
+          inputStyle={{ padding: "25px" }}
           inputClassName={"w-CountryPhoneFiledWidth"}
           value={phone}
           onChange={(phone) => setPhone(phone)}
         />
-        <div className="flex gap-3">
-          <Button text="CLEAR" className="bg-gray-500 rounded-full font-bold px-4 py-2" />
+        <div className="flex gap-3 flex-row-reverse">
+          <Button text="CLEAR" className="bg-slate-50 rounded-full font-medium px-4 py-2 text-base" />
           <Button
             text="CONTINUE"
             onClick={onButtonClick}
-            className="bg-green-500 rounded-full text-white font-bold px-4 py-2"
+            className="bg-SubmitButtonColor rounded-full text-white font-medium px-4 py-2 text-base"
           />
         </div>
       </div>
