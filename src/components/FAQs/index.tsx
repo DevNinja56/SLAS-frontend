@@ -2,8 +2,8 @@ import React from "react"
 import { faqDataItems } from "@components/FAQs/data/index"
 import Button from "@components/Common/ButtonAccordin"
 import { BsPlus } from "react-icons/bs"
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io"
+import { IoIosArrowUp } from "react-icons/io"
 import { FiMinus } from "react-icons/fi"
 
 interface propTypes {
@@ -20,9 +20,11 @@ const FAQs = ({ item, index, onClick, clickHeading, tutorLastIndex }: propTypes)
       onClick={onClick}
       className={`${
         index === tutorLastIndex ? "" : " text-mainParaColor"
-      } flex flex-col cursor-pointer relative w-full rounded-md my-4 `}
+      } flex flex-col cursor-pointer relative w-full rounded-md my-4 shadow-lg`}
     >
-      <div className="flex items-center justify-between rounded-xl py-4 px-4 drop-shadow-md bg-white ">
+      <div
+        className={` ${clickHeading[index] ? "rounded-bl-none rounded-br-none" : ""} rounded-xl flex items-center justify-between py-4 px-4 drop-shadow-md bg-white `}
+      >
         <h3 className="text-xl font-semibold text-mainParaColor">{item.question}</h3>
         <Button
           padding=""
@@ -33,7 +35,9 @@ const FAQs = ({ item, index, onClick, clickHeading, tutorLastIndex }: propTypes)
       </div>
       <p
         className={`text-xs md:text-sm text-mainLightBlackColor lg:text-base transition-all duration-300 drop-shadow-sm ${
-          clickHeading[index] ? " text-mainParaColor py-6 px-6 static visible drop-shadow-sm bg-LightGrayColor rounded-bl-xl rounded-br-xl" : "invisible absolute opacity-0 top-20"
+          clickHeading[index]
+            ? " text-mainParaColor py-6 px-6 static visible drop-shadow-sm bg-LightGrayColor rounded-bl-xl rounded-br-xl"
+            : "invisible absolute opacity-0 top-20 hidden"
         }`}
       >
         {item.answer}

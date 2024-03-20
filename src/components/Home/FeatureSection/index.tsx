@@ -20,46 +20,46 @@ const FeatureSection = () => {
           Explore the features that redefine your financial experience
         </p>
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper" slidesPerView={2.5} spaceBetween={30}>
-          <SwiperSlide>
-            <div className="drop-shadow-2xl p-6 bg-white rounded-lg ">
+          <SwiperSlide className="rounded-lg">
+            <div className=" p-6 bg-white rounded-lg ">
               <span className="font-bold flex items-center">
                 {" "}
                 <AiOutlineGlobal className="inline mr-2 text-xl" />
                 Global Transactions
               </span>
-              <p>Seamlessly conduct cross-border payments, connecting you to a world of financial possibilities.</p>
+              <p className="text-left">Seamlessly conduct cross-border payments, connecting you to a world of financial possibilities.</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className="drop-shadow-2xl p-6 bg-white rounded-lg">
+          <SwiperSlide className="rounded-lg">
+            <div className=" p-6 bg-white rounded-lg">
               <span className="font-bold flex items-center">
                 <GrCurrency className="inline mr-2 text-xl" />
                 Stellar Performance
               </span>
-              <p>Experience swift and efficient financial transactions that redefine the speed of payments. </p>
+              <p className="text-left">Experience swift and efficient financial transactions that redefine the speed of payments. </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="rounded-lg">
             {" "}
-            <div className="drop-shadow-2xl p-6 bg-white rounded-lg">
+            <div className=" p-6 bg-white rounded-lg">
               <span className="font-bold flex items-center">
                 <MdOutlineSecurity className="inline mr-2 text-xl" />
                 Ironclad Security
               </span>
-              <p>
+              <p className="text-left">
                 Trust in our robust security measures to safeguard every Transaction, ensuring your financial peace of
                 mind.{" "}
               </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="rounded-lg">
             {" "}
-            <div className="drop-shadow-2xl p-6 bg-white rounded-lg">
+            <div className="p-6 bg-white rounded-lg">
               <span className="font-bold flex items-center">
                 <MdOutlineSecurity className="inline mr-2 text-xl" />
                 Ironclad Security
               </span>
-              <p>
+              <p className="text-left">
                 Trust in our robust security measures to safeguard every Transaction, ensuring your financial peace of
                 mind.{" "}
               </p>

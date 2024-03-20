@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom"
 import { URL } from "@configs/index"
 import { useForm } from "react-hook-form"
 import { isValidPhoneNumber } from "libphonenumber-js"
+import './../../../styles/style.css'
 
 interface formType {
   email?: string
@@ -57,16 +58,15 @@ const SignUp = () => {
 
   return (
     <div className="w-full">
-      <div className="bg-FormBGColor w-2/3 mx-auto my-12 p-8 rounded-md">
+      <div className="bg-FormBGColor w-2/3 mx-auto my-12 p-8 rounded-3xl">
         <Heading text="Let's get you started!" className="text-center" />
         <p className="text-center my-4">Enter you details to get started</p>
         <div className="flex flex-col gap-8">
-          <form onSubmit={fromSubmit(handleSubmit)}>
-            <div className="flex gap-8 mb-8">
+          <form onSubmit={fromSubmit(handleSubmit)} className="flex flex-col gap-4">
+            <div className="flex gap-8">
               <div className="flex flex-col gap-2">
                 <label className="text-GreenBgColor font-medium">Mobile Number</label>
                 <PhoneInput
-                countrySelectorStyleProps={{}}
                   inputStyle={{ padding: "25px" }}
                   inputClassName={"w-PhoneFiledWidth"}
                   defaultCountry="pk"
@@ -132,7 +132,7 @@ const SignUp = () => {
                 customInputClass="px-2 py-[10px] text-[15px] rounded-md outline-none placeholder:text-md w-full"
               />
             </div>
-            <div className="flex items-center gap-3 my-8">
+            <div className="flex items-center gap-3">
               <input
                 type="checkbox"
                 name="agreement"
@@ -146,8 +146,8 @@ const SignUp = () => {
               </p>
               {error && <p className="text-red-500">{error}</p>}
             </div>
-            <Button text="CONTINUE" className="bg-GreenBgColor text-white w-1/5 mx-80 px-4 py-2 rounded-md font-bold" />
-            <p className="text-center font-medium mt-4">
+            <Button text="CONTINUE" className="bg-GreenBgColor text-white w-1/5 mx-80 px-4 py-2 rounded-md font-medium" />
+            <p className="text-center font-medium">
               Do you have an account?{" "}
               <NavLink to={URL.SIGN_IN} className="text-OrangeTextColor">
                 Login

@@ -21,6 +21,7 @@ module.exports = {
       },
       width: {
         PhoneFiledWidth: "24rem",
+        PhoneFiledSidebarWidth: "28rem",
         CountryPhoneFiledWidth: "18rem"
       }
     }

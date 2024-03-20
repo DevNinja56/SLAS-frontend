@@ -6,17 +6,17 @@ import { FaArrowAltCircleRight } from "react-icons/fa"
 const CurrencyChange = () => {
   return (
     <div className="flex flex-col gap-2 w-4/12">
-      <div className="flex p-2 bg-DashboardBgColor rounded-lg justify-between">
+      <div className="flex p-4 bg-DashboardBgColor rounded-lg justify-between items-center">
         <p className="flex flex-col">
-          <span className="text-OrangeTextColor  font-bold">Your Wallet Balance</span>
-          <span className="text-GreenBgColor text-xl font-bold">$5792.323</span>
+          <span className="text-OrangeTextColor text-xs font-bold">Your Wallet Balance</span>
+          <span className="text-GreenBgColor text-3xl font-bold">$5792.323</span>
         </p>
-        <TagButton text="-0.89%" className="bg-purple-200 rounded-full text-red-500" />
+        <span className="bg-purple-200 rounded-md text-red-500 p-4">-0.89%</span>
       </div>
-      <div className="flex flex-col gap-4 bg-purple-200 rounded-lg py-10 px-2">
+      <div className="flex flex-col gap-4 bg-purple-200 rounded-lg p-4">
         <p className="flex justify-between">
-          <span className="font-medium">Currency Conversion</span>
-          <FaArrowAltCircleRight className="text-xl text-GreenBgColor"/>
+          <span className="font-bold text-xl">Currency Conversion</span>
+          <FaArrowAltCircleRight className="text-2xl text-GreenBgColor" />
         </p>
         <InputBox type="text" placeholder="1000" />
         <InputBox type="text" placeholder="87000" />
