@@ -37,7 +37,7 @@ const FAQs = ({ item, index, onClick, clickHeading, tutorLastIndex }: propTypes)
         className={`text-xs md:text-sm text-mainLightBlackColor lg:text-base transition-all duration-300 drop-shadow-sm ${
           clickHeading[index]
             ? " text-mainParaColor py-6 px-6 static visible drop-shadow-sm bg-LightGrayColor rounded-bl-xl rounded-br-xl"
-            : "invisible absolute opacity-0 top-20 hidden"
+            : "invisible absolute opacity-0 top-20"
         }`}
       >
         {item.answer}

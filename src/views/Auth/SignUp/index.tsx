@@ -8,7 +8,8 @@ import { NavLink } from "react-router-dom"
 import { URL } from "@configs/index"
 import { useForm } from "react-hook-form"
 import { isValidPhoneNumber } from "libphonenumber-js"
-import './../../../styles/style.css'
+import "./../../../styles/style.css"
+import { ErrorMessage } from "@hookform/error-message"
 
 interface formType {
   email?: string
@@ -56,6 +57,23 @@ const SignUp = () => {
     }
   }
 
+  const [passwordStrength, setPasswordStrength] = useState("")
+
+  const handlePasswordChange = (e: any) => {
+    const password = e.target.value
+    let strength = ""
+
+    if (password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/) && password.length >= 8) {
+      strength = "strong"
+    } else if (password.length >= 8) {
+      strength = "medium"
+    } else {
+      strength = "weak"
+    }
+
+    setPasswordStrength(strength)
+  }
+
   return (
     <div className="w-full">
       <div className="bg-FormBGColor w-2/3 mx-auto my-12 p-8 rounded-3xl">
@@ -69,6 +87,7 @@ const SignUp = () => {
                 <PhoneInput
                   inputStyle={{ padding: "25px" }}
                   inputClassName={"w-PhoneFiledWidth"}
+                  placeholder="Enter Your Mobile Number"
                   defaultCountry="pk"
                   value={phone}
                   onChange={handlePhoneChange}
@@ -97,27 +116,40 @@ const SignUp = () => {
               />
             </div>
             <div className="flex gap-8">
-              <InputBox
-                {...register("password", {
-                  required: "Password is required",
-                  minLength: {
-                    value: 8,
-                    message: "Password must be at least 8 characters long"
-                  },
-                  pattern: {
-                    value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
-                    message:
-                      "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
-                  }
-                })}
-                error={errors.password?.message}
-                placeholder="Enter Your Password"
-                title="Password"
-                autoComplete="off"
-                className="p-0"
-                type="password"
-                customInputClass="px-2 py-[10px] text-[15px] rounded-md outline-none placeholder:text-md w-full"
-              />
+              <div className="w-full">
+                <InputBox
+                  {...register("password", {
+                    required:
+                      "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character",
+                    minLength: {
+                      value: 8,
+                      message: "Password must be at least 8 characters long"
+                    },
+                    pattern: {
+                      value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
+                      message:
+                        "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
+                    }
+                  })}
+                  onChange={handlePasswordChange}
+                  placeholder="Enter Your Password"
+                  title="Password"
+                  autoComplete="off"
+                  className="p-0"
+                  type="password"
+                  customInputClass="px-2 py-[10px] text-[15px] rounded-md outline-none placeholder:text-md w-full"
+                />
+                {passwordStrength && (
+                  <div className="h-0.5 bg-gray-300">
+                    <div
+                      className={`h-full ${passwordStrength === "weak" ? "bg-red-500" : passwordStrength === "medium" ? "bg-yellow-500" : "bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"}`}
+                    />
+                  </div>
+                )}
+                <p className="text-xs mt-1 text-red-600 ">
+                  <ErrorMessage errors={errors} name="password" />
+                </p>
+              </div>
               <InputBox
                 {...register("confirm_password", {
                   required: "Confirm Password is required",
@@ -146,7 +178,10 @@ const SignUp = () => {
               </p>
               {error && <p className="text-red-500">{error}</p>}
             </div>
-            <Button text="CONTINUE" className="bg-GreenBgColor text-white w-1/5 mx-80 px-4 py-2 rounded-md font-medium" />
+            <Button
+              text="CONTINUE"
+              className="bg-GreenBgColor text-white w-1/5 mx-80 px-4 py-2 rounded-md font-medium"
+            />
             <p className="text-center font-medium">
               Do you have an account?{" "}
               <NavLink to={URL.SIGN_IN} className="text-OrangeTextColor">

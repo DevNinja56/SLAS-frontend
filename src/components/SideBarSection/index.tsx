@@ -91,7 +91,7 @@ const SideBar = ({ onClose }: propType) => {
             <label className="text-GreenBgColor font-semibold">Your Message</label>
             <div className="message">
               <textarea
-                className={`border  border-grayColor block p-2.5 w-full text-sm md:text-xl rounded-lg  resize-none outline-none placeholder:text-sm `}
+                className={`border  border-grayColor block p-2.5 w-full text-sm md:text-xl rounded-lg  resize-none outline-none placeholder:text-lg `}
                 placeholder="Enter your purpose..."
                 rows={5}
               />
@@ -99,7 +99,7 @@ const SideBar = ({ onClose }: propType) => {
           </div>
           <Button
             text="SUBMIT QUERY"
-            className="bg-SubmitButtonColor text-white rounded-full font-medium w-2/6 p-2 ml-80"
+            className="bg-SubmitButtonColor text-white rounded-full font-medium w-2/6 p-2 ml-80 placeholder:text-md "
           />
         </form>
       </div>

@@ -26,7 +26,7 @@ const SignIn = () => {
       <div className="flex w-9/12 mx-auto gap-12">
         <div className="bg-FormBGColor p-8 rounded-3xl w-2/4">
           <Heading text="Hi, Welcome Back!" />
-          <p className="py-4">Enter you details to Login</p>
+          <p className="pb-2 font-medium text-gray-400">Enter you details to Login</p>
           <form className="flex flex-col gap-4" onSubmit={fromSubmit(handleSubmit)}>
             <InputBox
               {...register("email", {

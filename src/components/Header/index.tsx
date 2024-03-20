@@ -2,7 +2,7 @@ import { URL } from "@configs/index"
 import React, { useState, useRef } from "react"
 import { NavLink } from "react-router-dom"
 import { FaRegArrowAltCircleRight } from "react-icons/fa"
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"
 import DropDownMenu from "@components/DropdownMenu"
 
 const Header = () => {
@@ -29,7 +29,11 @@ const Header = () => {
             Features
           </NavLink>
           <div onClick={onShowDropDown} ref={dropDownRef} className="cursor-pointer">
-            <span className="font-semibold"> Business<IoIosArrowDown className="inline ml-1"/></span>
+            <span className="font-semibold">
+              {" "}
+              Business
+              {showDropDown ? <IoIosArrowUp className="inline ml-1" onClick={onShowDropDown} /> : <IoIosArrowDown className="inline ml-1"  onClick={onShowDropDown} />}
+            </span>
             <DropDownMenu showDropDown={showDropDown} setShowDropDown={setShowDropDown} dropDownRef={dropDownRef} />
           </div>
           <NavLink to={URL.FAQ} className="font-semibold">
