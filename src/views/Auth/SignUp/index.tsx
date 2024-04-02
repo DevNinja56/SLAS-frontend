@@ -87,13 +87,13 @@ const SignUp = () => {
                 <PhoneInput
                   inputStyle={{ padding: "25px" }}
                   inputClassName={"w-PhoneFiledWidth"}
-                  placeholder="Enter Your Mobile Number"
                   defaultCountry="pk"
                   value={phone}
                   onChange={handlePhoneChange}
                   inputProps={{
                     name: "phone",
-                    required: true
+                    required: true,
+                    placeholder: "Enter Your Mobile Number"
                   }}
                 />
                 {phoneError && <span className="text-red-500">{phoneError}</span>}

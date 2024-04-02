@@ -8,6 +8,7 @@ import MainRouter from "@routes/index"
 import ModalWrapper from "@modals/index"
 import { store } from "@store/index"
 import { BrowserRouter } from "react-router-dom"
+import { ToastContainer } from "react-toastify"
 
 const rootElement: HTMLElement = document.getElementById("root")!
 
@@ -24,5 +25,6 @@ root.render(
         </PropsProvider>
       </Provider>
     </BrowserRouter>
+    <ToastContainer />
   </Suspense>
 )
