@@ -5,6 +5,8 @@ import Heading from "@components/Common/Heading"
 import { NavLink } from "react-router-dom"
 import { URL } from "@configs/index"
 import Button from "@components/Common/Button"
+import { useNavigate } from "react-router-dom"
+import { toast, ToastContainer } from "react-toastify"
 
 interface formType {
   email: string
@@ -14,11 +16,17 @@ const SignIn = () => {
   const {
     register,
     handleSubmit: fromSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<formType>()
+  const navigate = useNavigate()
 
   const handleSubmit = ({ email, password }: formType) => {
-    console.log("form")
+    if (email === "admin@admin.com" && password === "super_admin") {
+        toast.success("Login Successfully...")
+      navigate(URL.DASHBOARD)
+    } else {
+      toast.error("Invalid email or password")
+    }
   }
 
   return (
@@ -32,7 +40,7 @@ const SignIn = () => {
               {...register("email", {
                 required: "Email is required",
                 pattern: {
-                  value: /^\S+@\S+\.\S+$/,
+                  value: /^[a-zA-Z0-9._%+-]+@(gmail\.com|admin\.com)$/,
                   message: "Invalid email format"
                 }
               })}
@@ -50,12 +58,12 @@ const SignIn = () => {
                 minLength: {
                   value: 8,
                   message: "Password must be at least 8 characters long"
-                },
-                pattern: {
-                  value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
-                  message:
-                    "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
                 }
+                // pattern: {
+                //   value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
+                //   message:
+                //     "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
+                // }
               })}
               error={errors.password?.message}
               placeholder="Enter Your Password"
